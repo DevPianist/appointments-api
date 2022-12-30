@@ -4,5 +4,6 @@ enum class Role {
     INTERVIEWER,
     RECRUITER,
     BARBER,
-    CUSTOMER
+    CUSTOMER,
+    CANDIDATE,
 }

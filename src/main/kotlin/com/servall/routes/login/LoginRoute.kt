@@ -1,5 +1,6 @@
 package com.servall.routes.login
 
+import com.devpianist.repositories.UserRepository
 import com.servall.dto.LoginDto
 import com.servall.repositories.BarbershopRepository
 import com.servall.repositories.InterviewsRepository
@@ -35,7 +36,7 @@ fun Route.interviewsLoginRoute() {
     route("/interviews/login") {
         post {
             val login = call.receive<LoginDto>()
-            val user = InterviewsRepository.users.find { it.userName.trim() == login.userName && it.password?.trim() == login.password }
+            val user = UserRepository.users.find { it.userName.trim() == login.userName && it.password?.trim() == login.password }
             if (user != null) {
                 call.respond(user.copy(password = null))
             } else {
