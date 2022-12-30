@@ -6,28 +6,28 @@ object InterviewsRepository {
 
     val users = mutableListOf(
         User(
-            userId = "1",
+            id = "1",
             fullName = "José García Urrútia",
             password = "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
             userName = "jose.garcia",
             role = Role.INTERVIEWER
         ),
         User(
-            userId = "2",
+            id = "2",
             fullName = "Wilson Castiblanco Quintero",
             password = "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
             userName = "wilson.castiblanco",
             role = Role.INTERVIEWER
         ),
         User(
-            userId = "3",
+            id = "3",
             fullName = "Teresa Morales",
             password = "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
             userName = "teresa.morales",
             role = Role.RECRUITER
         ),
         User(
-            userId = "4",
+            id = "4",
             fullName = "Candelaria DeFerrari",
             password = "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
             userName = "candelaria.deferrari",

@@ -3,12 +3,10 @@ package com.servall.routes.interviews
 import com.servall.models.Interview
 import com.servall.repositories.InterviewsRepository
 import com.servall.responses.ErrorResponse
-import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
 import io.ktor.server.application.call
 import io.ktor.server.request.receive
 import io.ktor.server.response.respond
-import io.ktor.server.response.respondText
 import io.ktor.server.routing.Route
 import io.ktor.server.routing.get
 import io.ktor.server.routing.post
@@ -34,7 +32,7 @@ fun Route.createInterview() {
     post("/interview") {
         val interview = call.receive<Interview>()
         InterviewsRepository.interviews.add(interview)
-        call.respondText("Interview created!", status = HttpStatusCode.Created)
+        call.respond(interview)
     }
 }
 

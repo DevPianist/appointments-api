@@ -9,3 +9,11 @@ data class Appointment(
     val barberId: String,
     val clientId: String
 )
+
+@Serializable
+data class AppointmentDto(
+    val id: String,
+    val datetime: Long,
+    val barber: User,
+    val customer: User
+)
